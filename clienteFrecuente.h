@@ -6,28 +6,35 @@
 #define CLASE_DEL_26_1_26_CLIENTEFRECUENTE_H
 #include"tarjetaDescuento.h"
 #include <string>
+#include <iostream>
+#include <sstream>
+#include "cliente.h"
 using namespace std;
 
-class clienteFrecuente {
+class clienteFrecuente: public cliente {
 private:
-    string nombre;
-    int id;
     string direccion;
     int numeroTele;
-    tarjetaDescuento* tarjeta;
-    public:
+    TarjetaDescuento* tarjeta;
+
+public:
+    // Constructor por defecto
     clienteFrecuente();
-    void setTarjetaDescuento(tarjetaDescuento*);
-    void setNumeroTele(int);
-    void setDireccion(string);
-    void setId(int);
-    void setNombre(string);
-    tarjetaDescuento getTarjetaDescuento();
-    int getNumeroTele();
-    string getDireccion();
-    int getId();
-    string getNombre();
-    ;
+
+    clienteFrecuente(string nombre, string cedula, string direccion, int numeroTele, TarjetaDescuento* tarjeta);
+    void setTarjetaDescuento(TarjetaDescuento* tarjeta);
+    void setNumeroTele(int numeroTele);
+    void setDireccion(string direccion);
+    void setNombre(string nombre);
+
+    // Métodos get
+    TarjetaDescuento* getTarjetaDescuento() const;
+    int getNumeroTele() const;
+    string getDireccion() const;
+    string getCedula() const;
+
+    void toString() const;
+
 
 
 };
