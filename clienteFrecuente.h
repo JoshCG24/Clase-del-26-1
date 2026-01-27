@@ -21,17 +21,15 @@ public:
     // Constructor por defecto
     clienteFrecuente();
 
-    clienteFrecuente(string nombre, string cedula, string direccion, int numeroTele, TarjetaDescuento* tarjeta);
+    clienteFrecuente(string nombre, int cedula, string direccion, int numeroTele, TarjetaDescuento* tarjeta);
     void setTarjetaDescuento(TarjetaDescuento* tarjeta);
     void setNumeroTele(int numeroTele);
     void setDireccion(string direccion);
     void setNombre(string nombre);
-
-    // Métodos get
     TarjetaDescuento* getTarjetaDescuento() const;
     int getNumeroTele() const;
     string getDireccion() const;
-    string getCedula() const;
+    int getCedula() const;
 
     void toString() const;
 

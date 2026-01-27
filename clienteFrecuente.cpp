@@ -10,7 +10,7 @@ clienteFrecuente::clienteFrecuente() : cliente() {
 }
 
 // Constructor con parámetros
-clienteFrecuente::clienteFrecuente(string nombre, string cedula, string direccion, int numeroTele, TarjetaDescuento* tarjeta)
+clienteFrecuente::clienteFrecuente(string nombre, int cedula, string direccion, int numeroTele, TarjetaDescuento* tarjeta)
     : cliente(nombre, cedula) {  // Llamar al constructor de la clase base (Cliente)
     this->direccion = direccion;
     this->numeroTele = numeroTele;
@@ -31,7 +31,7 @@ void clienteFrecuente::setDireccion(string direccion) {
 }
 
 void clienteFrecuente::setNombre(string nombre) {
-    this->nombre = nombre;  // Asumiendo que `nombre` es un atributo de la clase base `Cliente`
+    this-> setNombre(nombre);
 }
 
 // Métodos get
@@ -47,8 +47,8 @@ string clienteFrecuente::getDireccion() const {
     return this->direccion;
 }
 
-string clienteFrecuente::getCedula() const {
-    return this->cedula;  // Usamos el `cedula` heredado de la clase base
+int clienteFrecuente::getCedula() const {
+    return this->getCedula();
 }
 
 // Sobrescribir el método mostrarInfo para incluir la información adicional de cliente frecuente

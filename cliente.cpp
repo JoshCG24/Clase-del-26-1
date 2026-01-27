@@ -4,6 +4,11 @@
 
 #include "cliente.h"
 
+cliente::cliente() {
+    this -> nombre = "";
+    this->cedula = 0;
+}
+
 cliente::cliente(string nombre, int cedula) {
     this->nombre = nombre;
     this->cedula = cedula;

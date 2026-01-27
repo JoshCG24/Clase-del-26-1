@@ -12,7 +12,8 @@ class cliente {
 private:
     string nombre;
     int cedula;
-public:
+public:\
+    cliente();
     cliente(string nombre, int cedula);
     string getNombre();
     int getCedula();
